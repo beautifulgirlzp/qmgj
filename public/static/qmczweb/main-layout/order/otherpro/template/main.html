@@ -1,0 +1,48 @@
+<div class="container confirm-title">
+	<div class="row">
+		<div class="col-lg-4 col-lg-offset-1">
+			<h1 class="confirm-h1">{{pro.name}}</h1>
+		</div>
+		<div class="col-lg-6 text-center clearfix">
+			<div class="sprite sprite-cation1 fn-right"></div>
+		</div>
+	</div>
+</div>
+<div class="container confirm-box">
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1">
+			##_.each(pro.splist,function(item,index){##
+			<div class="confirm-form-box">
+				<form class="qmcz-form">
+					<div class="control-group confirm-line">
+						<label class="control-label">支持金额：</label>
+						<div class="controls">
+							<div class="control clearfix">
+								<span class="col-red">￥{{item.price}}</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label">支持回报：</label>
+						<div class="controls">
+							<div class="control">
+								<p class="words">{{pro.desc||'--'}}</p>
+								<p class="tips"><span>预计回报发放时间：</span>项目成功结束后5天内</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group clearfix">
+						<div class="controls">
+							<div class="control">
+								<a class="btn" href="#/orderconfirm/{{pro.id}}/spid{{item.spid}}">立即支持</a>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			##})##
+		</div>
+	</div>
+</div>

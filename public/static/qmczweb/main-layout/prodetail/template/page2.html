@@ -1,0 +1,35 @@
+<div class="pro-process">
+	<div class="process-tips">这里记录了项目发起人更新的项目进展，您可以发起话题或评论，并与发起人进行交流。</div>
+	<div class="process-timeline">
+		##_.each(projhistory,function(item,index){##
+			##if(index == 0){##
+			<div class="timeline-group clearfix">
+				<div class="line-node">
+					<h1>{{item.d}}</h1>
+					<p>{{item.name}}</p>
+				</div>
+			</div>
+			##}else if(index == (projhistory.length-1)){##
+			<div class="process-start">{{item.name}}</div>
+			##}else if(index%2 == 1){##
+			<div class="timeline-group clearfix">
+				<div class="line-words-left text-right">
+					<h2>{{item.d}}</h2>
+					<p>{{item.name}}</p>
+				</div>
+				<div class="line-left"></div>
+				<div class="line-words-right text-left">
+				</div>
+			</div>
+			##}else{##
+			<div class="timeline-group clearfix">
+				<div class="line-words-left text-right"></div>
+				<div class="line-right"></div>
+				<div class="line-words-right text-left">
+					<h2>{{item.d}}</h2>
+					<p>{{item.name}}</p>
+				</div>
+			</div>
+			##}##
+		##})##
+</div>

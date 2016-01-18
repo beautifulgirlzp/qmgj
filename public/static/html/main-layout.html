@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<!-- <link rel="icon" href="/favicon.ico"> -->
+    <!--lib级-->
+    <link rel="stylesheet" type="text/css" href="/static/ng-modules/ngweblib/global/0.0.1/bootstrap.min.css">
+    <!--业务级-->
+    <link rel="stylesheet" type="text/css" href="/static/qmczweb/main-layout/main.css?1453098258628">
+    <!-- 引用 html5shim 文件 -->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="/static/web-modules/weblib/global/0.2.0/js/html5Shim.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<header id="page-header" class="qmcz-g-header">
+		<div class="container qmcz-g-header-container">
+			<div class="row" id="header-row-box">
+				<div class="col-lg-8">
+					<ul class="left-nav-box clearfix">
+						<a href="#/index" title="全民共进"><li><span class="black">全民</span><span class="red">共进</span></li></a>
+						<a href="#/index" title="首页"><li class="indexTag active">首页</li></a>
+						<a href="#/column" title="节目专栏"><li class="columnTag">节目专栏</li></a>
+						<a href="#/circle" title="圈子"><li class="circleTag">圈子</li></a>
+						<li class="search-box">
+							<span class="sprite sprite-search"></span>
+							<input id="qmcz-g-searchinput" class="search" type="text" placeholder="请输入您要搜索的内容">
+						</li>
+					</ul>
+				</div>
+				<div class="col-lg-4">
+					<ul class="right-login-box clearfix">
+						<a href="#/register" title=""><li>注册</li></a>
+						<a href="#/login" title=""><li>登录</li></a>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div id="page-container" class="qmcz-g-body">
+		
+	</div>
+	<footer id="page-footer" class="qmcz-g-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-1 footer-left-box">
+					<a title="">关于全民共进</a>|<a title="">全民共进用户协议</a>|<a title="">全民共进风险提示</a>|<a title="">联系我们</a>
+				</div>
+				<div class="col-lg-2 footer-right-box text-right">
+					<a href="#/index" title="">
+						<span class="font-w">全民</span>
+						<span class="font-r">共进</span>
+					</a>
+					<span>©2015</span>
+				</div>
+			</div>
+		</div>
+	</footer>
+<script src="/static/ng-modules/ngweblib/global/0.0.1/global.min.js"></script>
+<script>
+seajs.config({
+	base: location.origin + '/static/ng-modules/',
+	paths: {
+        'static': location.origin + '/static',
+    },
+    alias: {
+        "main":"/static/qmczweb/main-layout/main"
+    },
+    map: [
+		[ /^(.*\.(?:css|js))(.*)$/i, '$1?1453098258628' ]
+	]
+});
+seajs.use("main",function(main){main.init()});
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<div class="container prolist-sift-box">
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1">
+			<div class="sift-group sift-cid">
+				<span data-cid="0" ##if(query.cid == "0"){##class="active"##}##>全部</span>
+				##_.each(cidData, function(item,index){##
+				<span data-cid="{{item.id}}" ##if(query.cid == item.id){##class="active"##}##>{{item.name}}</span>
+				##})##
+			</div>
+
+			<div class="sift-group sift-type">
+				<span data-type="0" class="active">所有</span>
+				<span data-type="1">已成功</span>
+				<span data-type="2">筹资中</span>
+			</div>
+
+			<div class="sift-group sift-order">
+				<span data-order="0" class="active">最新</span>
+				<span data-order="1">热门</span>
+				<span data-order="2">结束时间</span>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container prolist-list-box">
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1">
+			<div class="row prolist-show-box">
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container prolist-page-box">
+	<div class="row">
+		<div class="col-lg-12" id="prolist-page-wraper">
+			
+		</div>
+	</div>
+</div>

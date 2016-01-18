@@ -1,0 +1,80 @@
+<div class="col-lg-10">
+	<div class="row">
+		<div class="col-lg-5 col-lg-offset-1">
+			<div class="pro-title">热门项目</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="pro-more text-right"><a href="#/prolist/{{hotpro[0].cid}}" title="">查看更多</a></div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-11 col-lg-offset-1 hot-pro-box">
+			##_.each(hotpro,function(item,index){##
+			<div class="pro-info clearfix left-nav-li-{{item.cid}}" ##if(index != 0){##style="display: none;"##}##>
+				<a href="#/prodetail/{{item.id}}" title=""><img class="pro-img" src="{{item.img}}" alt=""></a>
+				<div class="pro-ject">
+					<div class="pro-ject-title"><a class="block" href="#/prodetail/{{item.id}}" title="{{item.name}}">{{item.name}}</a></div>
+					<div class="pro-ject-by">
+						<span title="by {{item.fname}}">by {{item.fname}}</span>
+					</div>
+					<div class="pro-ject-word">{{item.desc}}</div>
+					<div>
+						<span class="sprite sprite-tag"></span>
+						##_.each(projclass,function(ite,ind){##
+							##if(ite.id == item.cid){##
+							<span style="padding-right: 30px;" data-cid="{{item.cid}}">{{ite.name}}</span>
+							##}##
+						##})##
+						<span class="sprite sprite-tv"></span>
+						<span>卫视推荐</span>
+					</div>
+					<div class="pro-progress-box">
+						<div style="width: {{item.sp||0}}%;max-width:100%;" class="pro-progress-line"></div>
+					</div>
+					<div class="pro-ject-datas">
+						<div class="datas-box">
+							<p>{{item.sp||0}}%</p>
+							<div>进度</div>
+						</div>
+						<div class="datas-box">
+							<p>￥ {{item.rprice}}</p>
+							<div>已支持金额</div>
+						</div>
+						<div class="datas-box">
+							<p>{{item.rnum}}</p>
+							<div>已支持人数</div>
+						</div>
+						<div class="datas-box">
+							##if(item.rday > 0){##
+							<p title="{{item.rday}}">{{item.rday}}</p>
+							<div>剩余天数</div>
+							##}else if(100 > item.sp){##
+							<p>&nbsp;&nbsp;</p>
+							<div style="color:#cecece">众筹失败</div>
+							##}else{##
+							<p>&nbsp;&nbsp;</p>
+							<div style="color:#73a688">已成功</div>
+							##}##
+						</div>
+					</div>
+				</div>
+			</div>
+			##})##
+			<div class="pro-info clearfix left-nav-li-none" style="display: none;">
+				<div style="text-align: center;margin-top: 30px;">暂无数据</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="col-lg-2 pro-left-nav">
+	<ul>
+		##_.each(hotpro,function(item,index){##
+			##_.each(projclass,function(ite,ind){##
+				##if(ite.id == item.cid){##
+				<li ##if(index == 0){##class="active"##}## data-id="{{ite.id}}">{{ite.name}}</li>
+				##}##
+			##})##
+		##})##
+	</ul>
+</div>

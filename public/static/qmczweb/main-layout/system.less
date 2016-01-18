@@ -1,0 +1,236 @@
+*{margin: 0;padding: 0;list-style: none;}
+ol,ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body{
+	padding-top: 70px;
+}
+input:-webkit-autofill {
+    background-color: #FAFFBD;
+    background-image: none;
+    color: #828587;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #fff inset!important
+}
+input:focus {
+    outline:none;
+}
+a {
+    color: #828587;
+    text-decoration: none
+}
+a:hover {
+	color: #00a0ff;
+    text-decoration: underline
+}
+a.block {
+    color: #000;
+    text-decoration: none
+}
+a.block:hover {
+	color: #ff4200;
+    text-decoration: underline
+}
+a.blue {
+    color: #00a0ff;
+    text-decoration: none;
+}
+a.blue:hover {
+	color: #000;
+    text-decoration: none;
+}
+.btn,a.btn{
+	width: 140px;
+	display: block;
+	line-height: 45px;
+	background-color: #ff4200;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	border-radius: 3px;
+	cursor: pointer;
+	&:hover{
+		background: #d63700;
+		text-decoration: none;
+	}
+}
+.disabled{
+	background: #cecece;
+	&:hover{
+		background: #cecece;
+	}
+}
+
+.loading{
+	width: 100%;
+    height: 100px;
+    background: url('@{imgUrl}/sec-ld.gif') 50% no-repeat;
+}
+.col-blue{
+	color: #00a0ff;
+}
+.col-red{
+	color: red;
+}
+.qmcz-g-body{
+	min-height: 300px;
+}
+.pro-title{
+	font-size: 18px;
+	font-weight: 700;
+	color: #000;
+	margin-bottom: 40px;
+}
+.pro-more{
+	font-size: 14px;
+	color: #828687;
+}
+.prolist-group{
+	width: 94%;
+	margin: 0 3%;
+	border: 1px solid #dedee0;
+	border-radius: 3px;
+	&:hover{
+		box-shadow: 0px 1px 3px rgba(252, 146, 63,0.12), 0px 1px 2px rgba(252, 146, 63,0.24);
+	}
+	img{
+		width: 100%;
+		height: 200px;
+		border-radius: 3px 3px 0 0;
+	}
+}
+.pro-ject{
+	padding: 10px;
+	font-size: 12px;
+	color: #828587;
+	.pro-ject-title{
+		font-size: 14px;
+		font-weight: 700;
+		color: #000;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		word-break: keep all;
+	}
+	.pro-ject-by{
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		word-break: keep all;
+	}
+	.pro-ject-word{
+		margin-top: 20px;
+		margin-bottom: 30px;
+		height: 34px;
+		overflow:hidden;
+		text-overflow:ellipsis;
+		word-break:break-all;
+	}
+	.pro-progress-box{
+		height: 6px;
+	    margin-top: 8px;
+	    border-radius: 5px;
+	    background: #d8d9de;
+	    .pro-progress-line{
+	    	width: 0%;
+		    height: 100%;
+		    border-radius: 5px;
+		    background: #fe4300;
+	    }
+	}
+	.pro-ject-datas{
+		div.datas-box{
+			display: inline-block;
+			margin: 10px;
+			width: 78px;
+			&:first-child{
+				width: 50px;
+			}
+			&:last-child{
+				width: 58px;
+			}
+			p{
+				margin-bottom: 5px;
+				font-size: 12px;
+				color: #000;
+				font-weight: 700;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				word-break: keep all;
+			}
+		}
+	}
+}
+.qmcz-form{
+	.control-group{
+		margin-bottom: 20px;
+		.help-block{
+			color: red;
+			padding: 4px 0 0;
+			font-size: 12px;
+		}
+		.control-label{
+			float: left;
+			width: 80px;
+			color: #150b09;
+			line-height: 30px;
+			text-align: right;
+		}
+		.controls{
+			line-height: 30px;
+			margin-left: 100px;
+			color: #686868;
+			.control{
+				.text-input{
+					padding: 6px 4px;
+					width: 230px;
+					height: 28px;
+					line-height: 28px;
+					border: 1px solid #dcdcde;
+					border-radius: 3px;
+					color: #666;
+				}
+				.code-input{
+					padding: 6px 4px;
+					width: 70px;
+					height: 28px;
+					line-height: 28px;
+					border: 1px solid #dcdcde;
+					border-radius: 3px;
+					color: #666;
+				}
+				.code-nums{
+					display: inline-block;
+				    padding: 0 15px;
+				    border-radius: 3px;
+				    height: 28px;
+				    text-align: center;
+				    line-height: 28px;
+				    color: #140b0c;
+				    background: #f2f2f2;
+				    cursor: pointer;
+				    &.active{
+				    	cursor: auto;
+				    }
+				}
+				.control-btn{
+					width: 140px;
+					line-height: 45px;
+					background-color: #ff4200;
+					text-align: center;
+					color: #fff;
+					font-size: 14px;
+					border-radius: 3px;
+					cursor: pointer;
+					&:hover{
+						background: #d63700;
+					}
+				}
+			}
+		}
+	}
+}

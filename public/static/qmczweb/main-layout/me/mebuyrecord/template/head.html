@@ -1,0 +1,45 @@
+<div class="col-lg-2">
+	<div class="me-head-box fn-left">
+		<a href="#/meinfo" title=""><img class="headimg" src="{{data.img}}" alt=""></a>
+		<div class="me-icons">
+			<a href="#/mesafeset/0" title="手机验证"><span class="sprite sprite-phone"></span></a>
+			<a href="#/mesafeset/2" title="邮箱验证"><span class="sprite sprite-msg"></span></a>
+			<a href="#/mesafeset/1" title="身份证验证"><span class="sprite sprite-head"></span></a>
+		</div>
+	</div>		
+</div>
+<div class="col-lg-9 me-account-box">
+	<div class="username-group">
+		<span class="user-name">{{data.name}}</span>
+		<span>{{data.hello}}!</span>
+	</div>
+	<div class="usersafe-group">
+		##if(data.aqlv == 0){##
+		<div class="safe-rank-box low">
+			<span>账户安全等级：</span>
+			<span class="safe-progress">
+				<div class="safe-line"></div>
+			</span>
+			<span class="safe-rank">低</span>
+		</div>
+		##}else if(data.aqlv == 1){##
+		<div class="safe-rank-box middle">
+			<span>账户安全等级：</span>
+			<span class="safe-progress">
+				<div class="safe-line"></div>
+			</span>
+			<span class="safe-rank">中</span>
+		</div>
+		##}else if(data.aqlv == 2){##
+		<div class="safe-rank-box hight">
+			<span>账户安全等级：</span>
+			<span class="safe-progress">
+				<div class="safe-line"></div>
+			</span>
+			<span class="safe-rank">高</span>
+		</div>
+		##}##
+		<div>上次登录时间： {{data.login_time}}</div>
+	</div>
+</div>
+<input type="hidden" name="qmcz-g-userphone" value="{{data.phone}}">

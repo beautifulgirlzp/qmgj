@@ -1,0 +1,115 @@
+##if( type == '2' ){##
+	##_.each(list,function(item,index){##
+	<div class="list-item">
+		<div class="row">
+			<div class="col-lg-6 item-info">
+				<img class="teamimg" src="{{item.img}}" alt="">
+				<div class="teaminfo">
+					<div class="pro-ject">
+						<div class="pro-ject-title" title="{{item.name}}">{{item.name}}</div>
+						<div class="pro-ject-by">
+							<span title="by {{item.fname}}">by {{item.fname}}</span>
+						</div>
+						<div class="pro-ject-datas">
+							<div class="datas-box">
+								<div>订单号 {{item.oid}}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2 item-price">￥{{item.rprice}}</div>
+			##if( item.status == 0 ){##
+			<div class="col-lg-2 item-word">待支付</div>
+			<div class="col-lg-2 item-do item-three">
+				<p><a href="#/orderpay/oid={{item.oid}}/name={{item.name}}/money={{item.rprice}}" title="" class="item-pay">立即支付</a></p>
+				<p><a class="blue" href="javascript:;" title="">交易详情</a></p>
+				<p><a class="blue" href="javascript:;" title="">删除</a></p>
+			</div>
+			##}else if( item.status == 1 ){##
+			<div class="col-lg-2 item-word">支付成功</div>
+			<div class="col-lg-2 item-do item-two">
+				<p><a class="blue" href="javascript:;" title="">交易详情</a></p>
+				<p><a class="blue" href="javascript:;" title="">删除</a></p>
+			</div>
+			##}else if( item.status == 2 ){##
+			<div class="col-lg-2 item-word">已删除</div>
+			<div class="col-lg-2 item-do item-one">
+				<p><a class="blue" href="javascript:;" title="">交易详情</a></p>
+			</div>
+			##}##		
+		</div>
+	</div>
+	##})##
+##}##
+
+##if( type == '0' ){##
+	##_.each(list,function(item,index){##
+		##if( item.status == 0 ){##
+		<div class="list-item">
+			<div class="row">
+				<div class="col-lg-6 item-info">
+					<img class="teamimg" src="{{item.img}}" alt="">
+					<div class="teaminfo">
+						<div class="pro-ject">
+							<div class="pro-ject-title" title="{{item.name}}">{{item.name}}</div>
+							<div class="pro-ject-by">
+								<span title="by {{item.fname}}">by {{item.fname}}</span>
+							</div>
+							<div class="pro-ject-datas">
+								<div class="datas-box">
+									<div>订单号 {{item.oid}}</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-2 item-price">￥{{item.rprice}}</div>
+				<div class="col-lg-2 item-word">待支付</div>
+				<div class="col-lg-2 item-do item-three">
+					<p><a href="#/orderpay/oid={{item.oid}}/name={{item.name}}/money={{item.rprice}}" title="" class="item-pay">立即支付</a></p>
+					<p><a class="blue" href="javascript:;" title="">交易详情</a></p>
+					<p><a class="blue" href="javascript:;" title="">删除</a></p>
+				</div>
+			</div>
+		</div>
+		##}##
+	##})##
+##}##
+
+##if( type == '1' ){##
+	##_.each(list,function(item,index){##
+		##if( item.status == 1 ){##
+		<div class="list-item">
+			<div class="row">
+				<div class="col-lg-6 item-info">
+					<img class="teamimg" src="{{item.img}}" alt="">
+					<div class="teaminfo">
+						<div class="pro-ject">
+							<div class="pro-ject-title" title="{{item.name}}">{{item.name}}</div>
+							<div class="pro-ject-by">
+								<span title="by {{item.fname}}">by {{item.fname}}</span>
+							</div>
+							<div class="pro-ject-datas">
+								<div class="datas-box">
+									<div>订单号 {{item.oid}}</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-2 item-price">￥{{item.rprice}}</div>
+				<div class="col-lg-2 item-word">支付成功</div>
+				<div class="col-lg-2 item-do item-two">
+					<p><a class="blue" href="javascript:;" title="">交易详情</a></p>
+					<p><a class="blue" href="javascript:;" title="">删除</a></p>
+				</div>
+			</div>
+		</div>
+		##}##
+	##})##
+##}##
+
+##if(list == 'undefined' || list.length < 1){##
+<div style="text-align:center;margin-top: 40px;">暂无数据</div>
+##}##

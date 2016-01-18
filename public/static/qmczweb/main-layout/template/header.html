@@ -1,0 +1,28 @@
+<div class="col-lg-8">
+	<ul class="left-nav-box clearfix">
+		<a href="#/index" title="全民共进"><li><span class="black">全民</span><span class="red">共进</span></li></a>
+		<a href="#/index" title="首页"><li class="indexTag active">首页</li></a>
+		<a href="#/column" title="节目专栏"><li class="columnTag">节目专栏</li></a>
+		<a href="#/circle" title="圈子"><li class="circleTag">圈子</li></a>
+		<li class="search-box">
+			<span class="sprite sprite-search"></span>
+			<input id="qmcz-g-searchinput" class="search" type="text" placeholder="请输入您要搜索的内容">
+		</li>
+	</ul>
+</div>
+<div class="col-lg-4">
+	<ul class="right-login-box clearfix">
+		##if(isLogin == "token_t_qmcz"){##
+		<li class="me">
+			<a href="#/memain" title=""><span>{{name||'我'}}</span><span class="sprite sprite-down"></span></a>
+			<ul>
+				<a href="#/memain" title=""><li>个人中心</li></a>
+				<li class="qmcz-p-logout">退出</li>
+			</ul>
+		</li>
+		##}else{##
+		<a href="#/register" title=""><li>注册</li></a>
+		<a href="#/login" title=""><li>登录</li></a>
+		##}##
+	</ul>
+</div>

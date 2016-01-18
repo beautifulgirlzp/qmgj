@@ -1,0 +1,59 @@
+<div class="col-lg-10 col-lg-offset-1">
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="pro-title">卫视主推</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="pro-more text-right"><a href="#/prolist/0" title="">查看全部</a></div>
+		</div>
+	</div>
+	<div class="row">
+		##_.each(newpro,function(item,index){##
+		<div class="col-lg-4">
+			<div class="prolist-group">
+				<a href="#/prodetail/{{item.id}}" title=""><img src="{{item.img}}" alt=""></a>
+				<div class="pro-ject">
+					<div class="pro-ject-title"><a class="block" href="#/prodetail/{{item.id}}" title="{{item.name}}">{{item.name}}</a></div>
+					<div class="pro-ject-by">
+						<span title="by {{item.fname}}">by {{item.fname}}</span>
+					</div>
+					<div class="pro-ject-word">{{item.desc}}</div>
+					<div>
+						<span class="sprite sprite-tag"></span>
+						##_.each(projclass,function(ite,ind){##
+							##if(ite.id == item.cid){##
+							<span style="padding-right: 30px;" data-cid="{{item.cid}}">{{ite.name}}</span>
+							##}##
+						##})##
+					</div>
+					<div class="pro-progress-box">
+						<div style="width: {{item.sp||0}}%;max-width:100%;" class="pro-progress-line"></div>
+					</div>
+					<div class="pro-ject-datas">
+						<div class="datas-box">
+							<p title="{{item.sp||0}}%">{{item.sp||0}}%</p>
+							<div>当前进度</div>
+						</div>
+						<div class="datas-box">
+							<p title="￥{{item.rprice}}">￥{{item.rprice}}</p>
+							<div>已支持金额</div>
+						</div>
+						<div class="datas-box">
+							##if(item.rday > 0){##
+							<p title="{{item.rday}}">{{item.rday}}</p>
+							<div>剩余天数</div>
+							##}else if(100 > item.sp){##
+							<p>&nbsp;&nbsp;</p>
+							<div style="color:#cecece">众筹失败</div>
+							##}else{##
+							<p>&nbsp;&nbsp;</p>
+							<div style="color:#73a688">已成功</div>
+							##}##
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		##})##
+	</div>
+</div>

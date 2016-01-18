@@ -1,0 +1,63 @@
+<div class="me-info-box">
+	<div class="content-group">
+		<form class="qmcz-form" id="meinfo-form" role="form" action="?a=useredit" method="post" enctype="multipart/form-data">
+			<div class="control-group clearfix">
+				<label class="control-label">用户头像</label>
+				<div class="controls">
+					<div class="control headimg-control">
+						<img src="{{data.img}}" class="user-headimg" alt="">
+						<input name="file" type="file" id="file-input" class="file-input">
+						<div class="file-upload-tips">（请上传格式为jpg或png的图片，大小在2M内）</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="control-group clearfix">
+				<label class="control-label">用户昵称</label>
+				<div class="controls">
+					<div class="control">
+						<input name="name" class="text-input" type="text" value="{{data.name}}">
+					</div>
+				</div>
+			</div>
+
+			<div class="control-group clearfix">
+				<label class="control-label">性别</label>
+				<div class="controls">
+					<div class="control radio-control">
+						<span class="sprite sprite-blueradio-gray" data-sex="1"></span>
+						<span>男</span>
+						<span>&nbsp;&nbsp;</span>
+						<span class="sprite sprite-blueradio-gray" data-sex="0"></span>
+						<span>女</span>
+						<input type="hidden" name="sex" value="">
+					</div>
+				</div>
+			</div>
+
+			<div class="control-group clearfix">
+				<label class="control-label">关注圈子</label>
+				<div class="controls">
+					<div class="control checkbox-control">
+						##_.each(projclass,function(item,index){##
+						<label>
+							<!-- <input name="circle" type="checkbox" value="{{item.id}}"> -->
+							<span class="sprite sprite-redcheck-gray" data-id="{{item.id}}"></span>
+							<span>{{item.name}}</span>
+						</label>
+						##})##
+						<input type="hidden" name="quanzi" value="">
+					</div>
+				</div>
+			</div>
+
+			<div class="control-group clearfix">
+				<div class="controls">
+					<div class="control">
+						<div class="control-btn">保存</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>	

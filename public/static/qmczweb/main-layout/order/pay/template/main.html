@@ -1,0 +1,31 @@
+<div class="container pay-title">
+	<div class="row">
+		<div class="col-lg-4 col-lg-offset-1">
+			<h1 class="pay-h1">{{name}}</h1>
+		</div>
+		<div class="col-lg-6 text-center clearfix">
+			<div class="sprite sprite-cation2 fn-right"></div>
+		</div>
+		<div class="col-lg-10 col-lg-offset-1">
+			<p class="pay-tips">
+				<span class="order-nums">订单号 {{oid}}</span>
+				<span>请您在<span class="col-red">24小时</span>内付清款项，否则订单会被自动取消。</span>
+			</p>
+		</div>
+	</div>
+</div>
+<div class="container pay-box">
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1">
+			<div class="pay-money">应付款：<span>￥ {{money}}</span></div>
+		</div>
+
+		<div class="col-lg-10 col-lg-offset-1">
+			<div class="sprite sprite-payzfb pay-way active"></div>
+			<div class="sprite sprite-paywx pay-way"></div>
+		</div>
+		<div class="col-lg-10 col-lg-offset-1 pay-btn-group">
+			<div class="btn btn-pay">确认支付</div>
+		</div>
+	</div>
+</div>

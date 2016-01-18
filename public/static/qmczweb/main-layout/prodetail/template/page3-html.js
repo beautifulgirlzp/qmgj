@@ -1,0 +1,1 @@
+define(function(require, exports, module){return function(obj) {obj || (obj = {});var __t, __p = '', __e = _.escape;with (obj) {__p += '<div class="text-center" style="margin-top: 150px;">\n<h1>圈子交流，正在努力开发中……</h1>\n</div>';}return __p}});

@@ -1,0 +1,77 @@
+<div class="content-group">
+	<div class="content-title">
+		<span>我关注的项目</span>
+	</div>
+	<div class="content-list">
+		<ul class="clearfix">
+			##_.each(data.viewlist,function(item,index){##
+			<li class="clearfix">
+				<a href="#/prodetail/{{item.id}}" title=""><img class="teamimg" src="{{item.img}}" alt=""></a>
+				<div class="teaminfo">
+					<div class="pro-ject">
+						<div class="pro-ject-title"><a class="block" href="#/prodetail/{{item.id}}" title="{{item.name}}">{{item.name}}</a></div>
+						<div class="pro-ject-by">
+							<span title="by {{item.fname}}">by {{item.fname}}</span>
+						</div>
+						<div class="pro-progress-box">
+							<div style="width: {{item.sp || 0}}%;max-width:100%;" class="pro-progress-line"></div>
+						</div>
+						<div class="pro-ject-datas">
+							<div class="datas-box">
+								<div>已筹资 <span style="font-weight: 700;color: #000">￥{{item.rprice}}</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			##})##
+		</ul>
+	</div>
+</div>
+
+
+<div class="content-group">
+	<div class="content-title">
+		<span>当前最热</span>
+	</div>
+	<div class="content-list">
+		<div class="row">
+			##_.each(data.hot,function(item,index){##
+			<div class="col-lg-4">
+				<div class="prolist-group">
+					<a href="#/prodetail/{{item.id}}" title=""><img src="{{item.img}}" alt=""></a>
+					<div class="pro-ject">
+						<div class="pro-ject-title"><a class="block" href="#/prodetail/{{item.id}}" title="{{item.name}}">{{item.name}}</a></div>
+						<div class="pro-ject-word">{{item.desc}}</div>
+						<div class="pro-progress-box">
+							<div style="width: {{item.sp||0}}%;max-width:100%;" class="pro-progress-line"></div>
+						</div>
+						<div class="pro-ject-datas">
+							<div class="datas-box">
+								<p title="{{item.sp||0}}%">{{item.sp||0}}%</p>
+								<div>进度</div>
+							</div>
+							<div class="datas-box">
+								<p title="￥{{item.rprice}}">￥{{item.rprice}}</p>
+								<div>支持金额</div>
+							</div>
+							<div class="datas-box">
+								##if(item.rday > 0){##
+								<p title="{{item.rday}}">{{item.rday}}</p>
+								<div>剩余天数</div>
+								##}else if(100 > item.sp){##
+								<p>&nbsp;&nbsp;</p>
+								<div style="color:#cecece">众筹失败</div>
+								##}else{##
+								<p>&nbsp;&nbsp;</p>
+								<div style="color:#73a688">已成功</div>
+								##}##
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			##})##
+		</div>
+	</div>
+</div>

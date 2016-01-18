@@ -1,0 +1,1 @@
+define(function(require, exports, module){return function(obj) {obj || (obj = {});var __t, __p = '', __e = _.escape;with (obj) {__p += '<div class="pro-intro">\n' +((__t = (projinfo.txt)) == null ? '' : __t) +'\n<!-- <img class="proimg" src="/static/qmczweb/main-layout/images/detail1.jpg" alt=""> -->\n</div>';}return __p}});

@@ -1,0 +1,64 @@
+.me-info-box{
+	font-size: 12px;
+	.content-group{
+		background: #fff;
+		border: 1px solid #eee;
+		padding: 30px 40px;
+		margin-bottom: 15px;
+		.checkbox-control{
+			label{
+				width: 95px;
+    			display: inline-block;
+    			span.sprite{
+    				margin-bottom: -1px;
+    				cursor: pointer;
+    			}
+				span{
+					padding-left: 3px;
+				}
+			}
+		}
+		.radio-control{
+			span.sprite{
+				margin-bottom: -2px;
+				cursor: pointer;
+    		}
+		}
+		.headimg-control{
+			position: relative;
+			width: 70px;
+			height: 70px;
+			.file-upload-tips{
+				position: absolute;
+				left: 90px;
+				top: 0;
+				width: 370px;
+			}
+			.user-headimg{
+				width: 70px;
+				height: 70px;
+			}
+			input.file-input{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 70px;
+				height: 70px;
+				border-radius: 50%;
+				cursor: pointer;
+				z-index: 1;
+				background: transparent;
+				opacity: 0;
+			}
+			&.hasLoadimg{
+				width: auto;
+				height: 55px;
+				.file-upload-tips{
+					top: 30px;
+					left: 0;
+					width: 370px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,118 @@
+.qmcz-p-me{
+	.me-infocenter{
+		background: #effaff;
+		padding: 35px 40px 22px;
+		border-bottom: 1px solid #d9dade;
+		.me-head-box{
+			width: 135px;
+			text-align: center;
+			img.headimg{
+				width: 135px;
+				height: 135px;
+				border-radius: 50%;
+			}
+			.me-icons{
+				margin: 15px 0;
+				span.sprite{
+					margin: 0 3px;
+				}
+			}
+		}
+		.me-account-box{
+			color: #838287;
+			margin-left: 45px;
+			.username-group{
+				padding-bottom: 20px;
+				padding-top: 20px;
+    			border-bottom: 1px solid #d9dade;
+				.user-name{
+					font-size: 18px;
+					font-weight: 700;
+					color: #17130b;
+					padding-right: 10px;
+				}
+			}
+			.usersafe-group{
+				padding-top: 25px;
+				line-height: 20px;
+				.safe-rank-box{
+					line-height: 40px;
+					.safe-progress{
+						display: inline-block;
+					    width: 150px;
+					    margin: 0 5px;
+					    height: 10px;
+					    background: #dad9df;
+					    position: relative;
+					}
+					&.low{
+						.safe-rank{
+							color: #ff0000;
+						}
+						.safe-line{
+							width: 50px;
+					    	height: 100%;
+    						background: #ff0000;
+						}
+					}
+					&.middle{
+						.safe-rank{
+							color: #fe8a18;
+						}
+						.safe-line{
+							width: 100px;
+					    	height: 100%;
+    						background: #fe8a18;
+						}
+					}
+					&.hight{
+						.safe-rank{
+							color: #3bc569;
+						}
+						.safe-line{
+							width: 150px;
+					    	height: 100%;
+    						background: #3bc569;
+						}
+					}
+				}
+			}
+		}
+	}
+	.me-items-list{
+		background: #f5f4f2;
+		padding: 15px 0;
+		.left-nav-box{
+			float: left;
+			width: 160px;
+			padding: 30px 0;
+			text-align: center;
+			background: #fff;
+			border: 1px solid #eee;
+			li{
+				span{
+					display: inline-block;
+					line-height: 26px;
+					margin-bottom: 20px;
+					border-bottom: 1px dashed #6c6c6c;
+					color: #6c6c6c;
+					cursor: pointer;
+					&:hover,&.active{
+						color: #fc3f00;
+						border-bottom: 1px dashed #fc3f00;
+					}	
+				}
+				
+			}
+		}
+		.right-content-box{
+			float: right;
+			width: 795px;
+			@import './memain/memain.less';
+			@import './mecircle/mecircle.less';
+			@import './mebuyrecord/mebuyrecord.less';
+			@import './meinfo/meinfo.less';
+			@import './mesafeset/mesafeset.less';
+		}
+	}
+}

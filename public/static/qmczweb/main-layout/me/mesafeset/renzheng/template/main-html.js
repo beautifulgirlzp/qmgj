@@ -1,0 +1,1 @@
+define(function(require, exports, module){return function(obj) {obj || (obj = {});var __t, __p = '', __e = _.escape;with (obj) {__p += '<form id="renzheng-group" class="qmcz-form renzheng-group">\n<div class="loading">\n</div>\n</form>';}return __p}});
