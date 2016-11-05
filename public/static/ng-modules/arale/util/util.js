@@ -138,8 +138,8 @@ define(function (require, exports, module){
 			$(ops.button).addClass("disabled").attr("disabled", true);
 			$.ajax({
 				type: ops.type,
-				url: ops.autoAddUrl?(ops.addUrl + ops.url):ops.url,
-				// url: '/static/ng-modules/arale/util/'+ ops.url.replace('?a=','') +'.json',
+				// url: ops.autoAddUrl?(ops.addUrl + ops.url):ops.url,
+				url: '/static/ng-modules/arale/util/'+ ops.url.replace('?a=','') +'.json',
 				data: ops.data,
 				dataType: ops.dataType,
 				success: function(res) {
